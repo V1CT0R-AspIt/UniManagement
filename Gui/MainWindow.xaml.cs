@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess;
 using Entities;
+using Services;
 
 namespace Gui
 {
@@ -27,6 +28,8 @@ namespace Gui
 		public MainWindow()
 		{
 			InitializeComponent();
+			WeatherService weatherService = new();
+			string weather = weatherService.GetWeather();
 			try
 			{
 				//Initialize repo field:
