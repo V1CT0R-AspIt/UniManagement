@@ -1,0 +1,156 @@
+﻿<Window x:Class="Gui.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:Gui"
+		mc:Ignorable="d"
+		Title="MainWindow"
+		Height="auto"
+		Width="auto">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200" />
+			<ColumnDefinition Width="auto" />
+			<ColumnDefinition Width="auto" />
+			<ColumnDefinition Width="auto" />
+		</Grid.ColumnDefinitions>
+		<Button Content="ADD"
+				FontSize="16"
+				Padding="5"
+				HorizontalAlignment="Left"
+				Margin="20,271,0,0"
+				VerticalAlignment="Top"
+				Click="Add_New" />
+
+		<Button Content="UPDATE"
+				FontSize="16"
+				Padding="5"
+				HorizontalAlignment="Left"
+				Margin="72,271,0,0"
+				VerticalAlignment="Top"
+				Click="Button_Click" />
+
+		<TextBox Name="FNameBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,12,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="LNameBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,40,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="PhoneBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,68,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="MailBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,96,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="StNameBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,124,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="StNrBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,152,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="ZipBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,180,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="CityBox"
+				 HorizontalAlignment="Left"
+				 Margin="20,208,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+		<TextBox Name="CountryBox" HorizontalAlignment="Left"
+				 Margin="20,236,0,0"
+				 Text=""
+				 TextWrapping="Wrap"
+				 VerticalAlignment="Top"
+				 Width="120" />
+
+
+
+
+
+		<DataGrid Name="PersonList"
+				  Grid.Column="1"
+				  AutoGenerateColumns="False"
+				  Width="auto"
+				  Height="auto">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Firstname"
+									Binding="{Binding Path=FirstName}" />
+				<DataGridTextColumn Header="Lastname"
+									Binding="{Binding Path=LastName}" />
+			</DataGrid.Columns>
+		</DataGrid>
+		
+		
+		<DataGrid Name="ContactList"
+				  Grid.Column="2"
+				  AutoGenerateColumns="False"
+				  Width="auto"
+				  Height="auto">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Phone nr."
+									Binding="{Binding Path=PhoneNumber}" />
+				<DataGridTextColumn Header="Email"
+									Binding="{Binding Path=Mail}" />
+			</DataGrid.Columns>
+		</DataGrid>
+		
+		
+		<DataGrid Name="AddressList"
+				  Grid.Column="3"
+				  AutoGenerateColumns="False"
+				  Width="auto"
+				  Height="auto">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Streetname"
+									Binding="{Binding Path=StreetName}" />
+				<DataGridTextColumn Header="Street nr."
+									Binding="{Binding Path=StreetNumber}" />
+				<DataGridTextColumn Header="Zip Code"
+									Binding="{Binding Path=Zip}" />
+				<DataGridTextColumn Header="City"
+									Binding="{Binding Path=City}" />
+				<DataGridTextColumn Header="Country"
+									Binding="{Binding Path=Country}" />
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>
