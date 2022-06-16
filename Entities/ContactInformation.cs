@@ -8,6 +8,11 @@ namespace Entities
 		private string phoneNumber;
 		private string mail;
 
+		public ContactInformation()
+		{
+
+		}
+
 		public ContactInformation(int id, string phoneNumber, string mail)
 		{
 			Id = id;
